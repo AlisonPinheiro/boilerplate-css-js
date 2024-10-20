@@ -1,0 +1,38 @@
+.header {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 3;
+    transition: 0.3s;
+    @include mobile(){
+        padding: 10px ;
+        .menu-is-open & {
+            background-color:#084154;
+            position: fixed;
+        }
+    }
+    & > .container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px 0;
+        @include mobile(){
+            padding: 10px 0;
+        }
+    }
+
+    .header-section {
+        display: flex;
+        @include mobile() {
+            .header-logo {
+                max-width: 107px;
+            }
+        }
+    }
+
+
+}
